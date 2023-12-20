@@ -6,29 +6,66 @@
     <title>Document</title>
   </head>
   <body>
-    <p class="Mainheader">Welcome to Coding!</p>
-    <h3>so let's go over some basics!</h3>
-    <h4>First steps in HTML:</h4>
-    <p>
-      Start a HTML project out by typing "!", you will start seeing a small
-      popup window with either "!" or "!!!", if you click on the singular one,
-      the basic HTML layout including the header will create itself!
-    </p>
-    <div><img src="Images/setup.png" /></div>
-    <div><img src="Images/setupcreate.png" /></div>
-    <p>
-      So ofcourse you wont need to remember these annoying starting parts,
-      remember though, this is something that Visual Studio Code does for you so
-      it may not work on other programs
-    </p>
+    <div class="showtext">
+      <p class="Mainheader">Welcome to Coding!</p>
+      <h2 style="text-align: center">so let's go over some basics!</h2>
+      <h3>First steps in HTML:</h3>
+      <div>
+        <p>
+          Start a HTML project out by typing "!", you will start seeing a small
+          popup window with either "!" or "!!!", if you click on the singular
+          one, the basic HTML layout including the header will create itself!
+        </p>
+        <div><img src="Images/setup.png" /></div>
+        <div><img src="Images/setupcreate.png" /></div>
+        <p>
+          So ofcourse you wont need to remember these annoying starting parts,
+          remember though, this is something that Visual Studio Code does for
+          you so it may not work on other programs
+        </p>
+        <p class="important">
+          the only thing you may wanna change is the text between the title
+          tags, since thats the tag above your google tab
+        </p>
+      </div>
+      <h3>Basic Layout:</h3>
+      <p>
+        To seperate different elements, we use containers. Container just means
+        somewhere where all other elements are stored.
+      </p>
+      <p style="margin-top: -18px">
+        in HTML we use "&lt;div&gt;" tags, ofcourse dont forget to close the tag
+        with a second tag and a "/" at the start!
+      </p>
+      <img src="Images/container.png" />
+      <p>Every Container and/or Tag have to be within the "&lt;body&gt;" Tag</p>
+      <p style="margin-top: -18px">
+        (well technically they dont HAVE to, but if you want to have clean and
+        working code in the future it does)
+      </p>
+    </div>
   </body>
 </html>
 
 <style>
+  body {
+    background-image: url("https://wallpaperfx.com/view_image/lake-louise-landscape-1920x1080-wallpaper-17297.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+  }
+  .showtext {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
   img {
     clear: both;
   }
-
+  .important {
+    color: tomato;
+  }
   .Mainheader {
     font-size: xx-large;
     text-align: center;
@@ -36,10 +73,11 @@
     font-weight: bold;
     margin-bottom: 50px;
     width: 100%;
+    text-decoration: underline;
   }
   h3 {
-    text-align: center;
     width: 100%;
+    margin-top: 2%;
   }
   p {
     font-size: large;
