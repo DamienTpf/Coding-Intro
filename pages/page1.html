@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cya soon!</title>
+  </head>
+  <body>
+    <div class="showtext">
+      <p class="Mainheader">Welcome to Coding!</p>
+      <h2 style="text-align: center">Lets have some fun now :D</h2>
+      <div>
+        <h3>small fun thing to know:</h3>
+        <p>
+          with "&lt;iframe&gt;" you can include other websites into your own,
+          you can play around with that quite alot!
+        </p>
+        <button onclick="load()">Load Mario Bros</button>
+        <button onclick="unload()">Unload</button> <br />
+        <p>shift = run | arrow keys = movement | space = jump</p>
+        <iframe
+          style="width: 70%; height: 509px"
+          autoplay="0"
+          id="myIframe"
+        ></iframe>
+      </div>
+      <div>
+        <h3>Audios can also be included:</h3>
+        <p class="important">Ben Schuller - You Make Me Worse</p>
+        <audio controls loop>
+          <source src="../mp3/youmakemeworse.mp3" type="audio/mp3" /></audio
+        ><br />
+        <a
+          style="position: relative; font-size: small; padding: 0"
+          href="https://open.spotify.com/intl-de/album/5KofWQq8qVcPyX6mAEzMcQ?si=WZ9GoyLrSS2xJ3vzQcWAYg"
+          >(One of my favourite albums of all time, also by Ben Schuller)</a
+        >
+        <p>include audios like this:</p>
+        <img src="../Images/audio.png" />
+        <p>
+          If you're wondering about the path ".." means the same as "go a folder
+          back", and "/mp3" is just a folder name. type has to be specific to
+          the audio though.
+        </p>
+        <p class="important">
+          Also fun fact: when you write something inside of a tag aside from the
+          tag name ("src" as example), then you use something called an
+          attribute. attributes are there to manipulate the tags. The only one
+          necessary for audio would be <b>controls.</b> Controls just enables
+          the visual MP3 player, otherwise you could also have music
+          automatically play in the background.
+        </p>
+      </div>
+      <div>
+        <h3>
+          easy Openable Information is possible with "&lt;details&gt;" as an
+          outer-tag and an "&lt;summary&gt;" inner-tag
+        </h3>
+        <details>
+          <summary>Show the Code</summary>
+          <img src="../Images/summary.png" />
+        </details>
+      </div>
+      <div>
+        <a href="page2.html">Next Page -></a>
+        <a class="prev" href="../Index.html"><--Previous Page </a>
+      </div>
+    </div>
+  </body>
+</html>
+
+<style>
+  body {
+    background-image: url("https://wallpapers.com/images/featured/simple-clean-8g9017acqfddycrl.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+  }
+  .showtext {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  img {
+    clear: both;
+  }
+  .important {
+    color: tomato;
+    font-weight: 700;
+  }
+  .Mainheader {
+    font-size: xx-large;
+    text-align: center;
+    text-decoration: solid;
+    font-weight: bold;
+    margin-bottom: 50px;
+    width: 100%;
+    text-decoration: underline;
+  }
+  h3 {
+    width: 100%;
+    margin-top: 2%;
+    margin-left: 5px;
+  }
+  p {
+    font-size: large;
+    width: 50%;
+    margin-left: 5px;
+  }
+  a {
+    padding: 15px;
+    color: chartreuse;
+    font-weight: 700;
+    font-size: x-large;
+    position: absolute;
+    right: 0;
+  }
+  .prev {
+    left: 0;
+    right: auto;
+  }
+</style>
+<script>
+  function load() {
+    document.getElementById("myIframe").src =
+      "https://supermario-game.com/de/fullscreen";
+  }
+  function unload() {
+    document.getElementById("myIframe").src = "";
+  }
+</script>

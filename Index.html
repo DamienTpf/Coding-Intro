@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Coding Tutorial</title>
   </head>
   <body>
     <div class="showtext">
@@ -28,28 +28,45 @@
           tags, since thats the tag above your google tab
         </p>
       </div>
-      <h3>Basic Layout:</h3>
-      <p>
-        To seperate different elements, we use containers. Container just means
-        somewhere where all other elements are stored.
-      </p>
-      <p style="margin-top: -18px">
-        in HTML we use "&lt;div&gt;" tags, ofcourse dont forget to close the tag
-        with a second tag and a "/" at the start!
-      </p>
-      <img src="Images/container.png" />
-      <p>Every Container and/or Tag have to be within the "&lt;body&gt;" Tag</p>
-      <p style="margin-top: -18px">
-        (well technically they dont HAVE to, but if you want to have clean and
-        working code in the future it does)
-      </p>
+      <div>
+        <h3>Basic Layout:</h3>
+        <p>
+          To seperate different elements, we use containers. Container just
+          means somewhere where all other elements are stored.
+        </p>
+        <p style="margin-top: -18px">
+          in HTML we use "&lt;div&gt;" tags, ofcourse dont forget to close the
+          tag with a second tag and a "/" at the start!
+        </p>
+        <img src="Images/container.png" />
+        <p>
+          Every Container and/or Tag have to be within the "&lt;body&gt;" Tag,
+          they also go to the next line if you have multiple divs
+        </p>
+        <p style="margin-top: -18px">
+          (well technically they dont HAVE to, but if you want to have clean and
+          working code in the future it does)
+        </p>
+        <p class="important">
+          If you're wondering why you need containers, they will become very
+          handy once you start with css aka the optic part of websites, also as
+          said they automatically go to the next line like "&lt;p&gt;"
+        </p>
+        <p>
+          Also, I know youre wondering and yes, div means divison, for the
+          division of the website.
+        </p>
+      </div>
+      <div>
+        <a href="pages/page1.html">Next Page -></a>
+      </div>
     </div>
   </body>
 </html>
 
 <style>
   body {
-    background-image: url("https://wallpaperfx.com/view_image/lake-louise-landscape-1920x1080-wallpaper-17297.jpg");
+    background-image: url("https://wallpapers.com/images/featured/simple-clean-8g9017acqfddycrl.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     color: white;
@@ -65,6 +82,7 @@
   }
   .important {
     color: tomato;
+    font-weight: 700;
   }
   .Mainheader {
     font-size: xx-large;
@@ -78,9 +96,19 @@
   h3 {
     width: 100%;
     margin-top: 2%;
+    margin-left: 5px;
   }
   p {
     font-size: large;
     width: 50%;
+    margin-left: 5px;
+  }
+  a {
+    padding: 15px;
+    color: chartreuse;
+    font-weight: 700;
+    font-size: x-large;
+    position: absolute;
+    right: 0;
   }
 </style>

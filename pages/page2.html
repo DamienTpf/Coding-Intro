@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Merry Christmas!</title>
+  </head>
+  <body>
+    <div class="showtext">
+      <p class="Mainheader">Welcome to Coding!</p>
+      <h2 style="text-align: center">All the Tags you will really need!</h2>
+      <h4 style="text-align: center">you can click on them.</h4>
+      <div>
+        <details>
+          <summary>&lt;p&gt;</summary>
+          <p>
+            You use this tag to write paragraphs, after the "&lt;p&gt;" tag
+            closes, a new line automatically gets entered, just write the
+            contents inside.
+          </p>
+        </details>
+      </div>
+
+      <div>
+        <details>
+          <summary>&lt;h1&gt; - &lt;h6&gt;</summary>
+          <p>
+            Simple header tags, so you dont need to do the whole css for it. the
+            bigger the number in the tag the smaller the text, only 6 headers
+            pre-configured
+          </p>
+        </details>
+      </div>
+
+      <div>
+        <details>
+          <summary>&lt;a&gt;</summary>
+          <p>
+            Used to Link to outside sources, most often written as &lt;a
+            href="https://some-link.de"&gt;, also works with local files.
+            automatically recolors everything inside the tag to a
+            <b style="color: blue">dark blue</b> (I changed the color to green),
+            as to show its a link. <br />The text which contains the Link should
+            be written between the start & end tag <br />
+            &lt;a href="https://twitter.com/"&gt;Twitter&lt;/a&gt; <br />
+            <a
+              style="padding: 0; margin-left: 5px; margin-top: -5px"
+              class="link"
+              href="https://twitter.com"
+              >Twitter</a
+            >
+          </p>
+        </details>
+      </div>
+
+      <div>
+        <details>
+          <summary>&lt;br&gt;</summary>
+          <p>
+            Simple break, people dont like to see this since its "unclean code",
+            so try to start a new line with actual tags not breaks
+          </p>
+        </details>
+      </div>
+
+      <div>
+        <details>
+          <summary>&lt;img&gt;</summary>
+          <p>
+            Usually written as &lt;img src="https://some-link.de"&gt;, as the
+            tag-name tells, you just insert an image.
+            <br />Doesn't require a closing tag.
+          </p>
+        </details>
+      </div>
+
+      <div>
+        <details>
+          <summary>&lt;table&gt;</summary>
+          <p>
+            Tables are a bit more complicated, "&lt;table&gt;" is just the
+            "main" tag, you will also need
+            <b>
+              &lt;tr&gt; (Table Row) &lt;thead&gt; (Table Head) &lt;tbody&gt;
+              (Table Body) & &lt;td&gt; (Table Data)</b
+            >
+          </p>
+          <p class="important">it might look like this!</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Movie</th>
+                <th>Main Character</th>
+                <th>Antagonist</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Lilo & Stitch</td>
+                <td>Stitch</td>
+                <td>Captain Gantu</td>
+              </tr>
+              <tr>
+                <td>Beauty and the Beast</td>
+                <td>Beast / Prince Adam</td>
+                <td>Gaston</td>
+              </tr>
+            </tbody>
+          </table>
+          <br />
+          <img src="../Images/Table.png" />
+          <p class="important">according CSS:</p>
+          <img src="../Images/Table2.png" /><br />
+          <a class="link" href="https://www.w3schools.com/html/html_tables.asp"
+            >More Information about Tables</a
+          >
+        </details>
+      </div>
+
+      <div>
+        <details>
+          <summary>&lt;form&gt;</summary>
+          <p>
+            Forms are there, so you can actually input stuff into your website.
+            like Login-Data or maybe like Feedback! And while you can create
+            Input Fields without the &lt;form&gt;-Tag, you will need it to
+            actually work with the data correctly. (with a few exceptions, but
+            we talk generally here!)
+          </p>
+          <details>
+            <summary class="secondary">Example</summary>
+            <p class="important">
+              A form can have any shape/size and Form (pun intended), so
+              anything I show will just be an example.
+            </p>
+
+            <form style="background-color: white; color: black; width: 30%">
+              <label
+                >Name: <input type="text" placeholder="Input your name here"
+              /></label>
+              <label
+                >Surname:
+                <input type="text" placeholder="Input your surname here"
+              /></label>
+              <br />
+              <p>Favourite Part of Web-Design?</p>
+              <input type="radio" id="html" name="fav_language" value="HTML" />
+              <label for="html">HTML</label><br />
+              <input type="radio" id="css" name="fav_language" value="CSS" />
+              <label for="css">CSS</label><br />
+              <input
+                type="radio"
+                id="javascript"
+                name="fav_language"
+                value="JavaScript"
+              />
+              <label for="javascript">JavaScript</label>
+              <br />
+              <p>Choose a Dish:</p>
+              <select id="cars" name="cars" size="3" style="width: 100px">
+                <option value="volvo">Spaghetti</option>
+                <option value="saab">Sushi</option>
+                <option value="fiat">Burger</option>
+                <option value="audi">cordon bleu</option>
+              </select>
+              <br />
+              <input
+                style="margin-left: 40%"
+                type="submit"
+                placeholder="submit"
+                value="submit"
+              />
+            </form>
+          </details>
+          <details>
+            <summary class="secondary">Explanation</summary>
+            <p>
+              A &lt;form&gt; Tag includes many other types of tags, but most
+              prominently the <b> &lt;input&gt;-tag </b>, it's used to access
+              all different kinds of inputs!
+            </p>
+            <p class="important">
+              A standard &lt;input&gt;-tag will always be an Text-Field input
+              field like: <br />
+              <input /><br />
+              but by setting the Attribute (the thing you set outside the tag
+              name but inside the Tag), you can alter the Type of input field,
+              that you want to use.
+            </p>
+            <a
+              class="link"
+              href="https://www.w3schools.com/html/html_form_input_types.asp"
+              >All Input Types</a
+            >
+            <p>
+              These input types can reach from a color-Picker to a File, so
+              almost everything should be covered here!
+            </p>
+            <input type="color" />
+            <input type="file" placeholder="please input file" />
+            <p class="important">
+              if you want to actually use the data you will need a submit button
+              though, so try to include a &lt;input type="submit"&gt; in your
+              &lt;form&gt;!
+            </p>
+            <p>
+              Sadly there are more types of inputs you will have to know if you
+              work with forms, &lt;Textarea&gt; is a simple one, as the name
+              says you have a block of text to work with, that you can also
+              customize more!
+            </p>
+            <textarea>I've already input some text here</textarea>
+            <p>
+              To get a Selection going use &lt;Select&gt; with &lt;option&gt;
+              tags inside of them for the different options. <br />
+              and with the "selected" attribute (&lt;option selected&gt;), you
+              can automatically assign an option, even if it isn't the first
+              one!
+            </p>
+            <select>
+              <option>English</option>
+              <option>German</option>
+              <option selected>Spanish</option>
+            </select>
+            <p>
+              While not an Input field, you can wrap a &lt;label&gt; Tag around
+              any input field to give it as you may guess, a label.
+            </p>
+            <p class="important">
+              Like this:<b>
+                &lt;label&gt;Name&lt;input type="text"&gt;&lt;/label&gt;</b
+              >
+            </p>
+            <label>Name<input type="text" /></label>
+            <p>
+              All other Form elements, are not needed as much as these core
+              Ones, but you can find the rest
+              <a
+                class="link"
+                style="padding: 0"
+                href="https://www.w3schools.com/html/html_form_elements.asp"
+                >here.</a
+              >
+            </p>
+            <p>
+              and all the attributes (some will really help you), are
+              <a
+                class="link"
+                style="padding: 0"
+                href="https://www.w3schools.com/html/html_form_attributes.asp"
+                >here.</a
+              ><br />
+              only notable thing is, you can give every tag an id with id="" and
+              labels can attach to ids even if they dont wrap around them with
+              for="id-of-tag"
+            </p>
+          </details>
+          <details class="secondary">
+            <summary>Code-Example</summary>
+            <img src="../Images/form code.png" />
+            <p class="important">oh yeah: input-tags dont need end tags</p>
+          </details>
+        </details>
+      </div>
+
+      <div>
+        <a href="page3.html">Next Page -></a>
+        <a class="prev" href="page1.html"><--Previous Page </a>
+      </div>
+    </div>
+  </body>
+</html>
+
+<style>
+  .link {
+    position: relative;
+    font-size: medium;
+  }
+  body {
+    background-image: url("https://wallpapers.com/images/featured/simple-clean-8g9017acqfddycrl.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+  }
+  .showtext {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .secondary {
+    font-size: 20px;
+    color: chartreuse;
+  }
+  img {
+    clear: both;
+  }
+  .important {
+    color: tomato;
+    font-weight: 700;
+  }
+  .Mainheader {
+    font-size: xx-large;
+    text-align: center;
+    text-decoration: solid;
+    font-weight: bold;
+    margin-bottom: 50px;
+    width: 100%;
+    text-decoration: underline;
+  }
+  h3 {
+    width: 100%;
+    margin-top: 2%;
+    margin-left: 5px;
+  }
+  p {
+    font-size: large;
+    width: 50%;
+    margin-left: 5px;
+  }
+  a {
+    padding: 15px;
+    color: chartreuse;
+    font-weight: 700;
+    font-size: x-large;
+    position: absolute;
+    right: 0;
+  }
+  .prev {
+    left: 0;
+    right: auto;
+  }
+  details {
+    margin-bottom: 15px;
+    font-size: 22px;
+  }
+  table,
+  th,
+  td {
+    border: 1px solid white;
+    text-align: center;
+  }
+  summary {
+    cursor: pointer;
+  }
+</style>
