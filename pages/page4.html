@@ -240,7 +240,7 @@
           </p>
         </details>
         <details>
-          <summary class="secondary">Overflow</summary>
+          <summary class="secondary">overflow</summary>
           <p>
             with overflow you can manipulate how elements look, once they
             would go over the parent container, for example you can hide
@@ -717,7 +717,7 @@
         you'd like to blend out Text after "x" amount of lines you can use:<br><br>
         display: -webkit-box;<br>
 
-        -webkit-line-clamp: 4;<br>
+        -webkit-line-clamp: x;<br>
         -webkit-box-orient: vertical;<br>
         overflow: hidden;<br>
       </p>
@@ -725,7 +725,8 @@
         style="display: -webkit-box; max-width: 200px; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
         This thing should break after just two whole lines of text</p>
       <p class="important">Full text: "This thing should break after just two whole lines of text", it automatically
-        adds the "...", change "-webkit-line-clamp: x" to specify the amount of lines you can write before it cuts off.
+        adds the "...".<br> Change "-webkit-line-clamp: x" to specify the amount of lines you can write before it cuts
+        off.
       </p>
     </details>
   </div>
