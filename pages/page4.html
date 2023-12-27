@@ -1,356 +1,741 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>We getting somewhere now</title>
-  </head>
-  <body>
-    <div class="showtext">
-      <p class="Mainheader">Welcome to Coding!</p>
-      <h2 style="text-align: center">CSS</h2>
 
-      <div>
-        <h3>
-          CSS allows you to change how your website looks, so let's go over it!
-        </h3>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>We getting somewhere now</title>
+</head>
 
-      <div>
-        <details>
-          <summary>Initialise CSS</summary>
+<body>
+  <div class="showtext">
+    <p class="Mainheader" onclick="random()">Welcome to Coding!</p>
+    <h2 style="text-align: center">CSS</h2>
+
+    <div>
+      <h3>
+        CSS allows you to change how your website looks, so let's go over it!
+      </h3>
+    </div>
+
+    <div>
+      <details>
+        <summary>Initialise CSS</summary>
+        <p>
+          I said, "Every" tag has to be inside the &lt;body&gt;-Tag, well for
+          CSS and Javascript this doesnt apply, so let's break some rules
+          here!
+        </p>
+        <p class="important">
+          To start using CSS we build a &lt;style&gt;-Tag outside of the
+          &lt;body&gt;-Tag.<br />Kinda like:
+        </p>
+        <img src="../Images/CSS init.png" />
+        <p>
+          So, now that we have a CSS-Sheet in our code, we should go over the
+          basics of CSS.
+        </p>
+        <p>
+          In CSS we can define spefic ways an Element can look with either the
+          tags, Id's of the element or so called Classes.<br />
+          Both class and Id are an attribute any HTML-Tag can have, (&lt;div
+          id="someID" class="TestClass Testclass2"&gt;).<br />
+          As you can see, you can also combine multiple classes in a single
+          Element, so you can be very specific with classes.
+        </p>
+        <p>
+          lets start creating a Class, in your Stylesheet (&lt;style&gt;) you
+          can create a new class by writing:<br />
+          <b>.</b>Classname <br />{<br /><br />}
+        </p>
+        <p>
+          The Dot here specifies that we are talking about a class.<br />
+          To use this class give any HTML-Tag the attribute class="Classname".
+          To use multiple classes just write two classnames in the same
+          attribute with a space between them.
+        </p>
+        <p>
+          To Alter a whole tag, (so everytime for example, when you use
+          &lt;img&gt;, the image looks exactly how you want it to look), you
+          just get rid of the Dot.<br />Kinda like:<br />img
+          <br />{<br /><br />}
+        </p>
+        <p>
+          And to use an ID you just use a #<br />
+          #IDname <br />{<br /><br />}
+        </p>
+        <p>
+          if you want to just target the whole page, you write a * instead of
+          an ID, Class or Tag (nothing else needed)
+        </p>
+      </details>
+
+      <details>
+        <summary>Options</summary>
+        <p>
+          So lets start altering stuff with CSS now, the syntax of a
+          Stylesheet is simple <br />
+          .SomeClass <br />{<br />SomeKindofAttribute : Value;<br />}<br />
+          the Semicolon (;) after every property is mandatory.
+        </p>
+        <a class="link" style="padding: 5px" href="https://www.w3schools.com/cssref/index.php">Here are all properties a
+          Tag can have, but I'll explain the most
+          important ones and give some extra trivia for some.</a>
+
+        <details style="margin-top: 1%">
+          <summary class="secondary">color</summary>
           <p>
-            I said, "Every" tag has to be inside the &lt;body&gt;-Tag, well for
-            CSS and Javascript this doesnt apply, so let's break some rules
-            here!
+            Very Simple, you can change the Color of the written Text, you can
+            use predefined colors, rgb codes like "rgb(0, 0, 0)" (which would
+            be black) or hex like "#000000" (also black).<br />
+            rgb also has a sub category called rgba in which you can add an
+            opacity aswell like "rgba(0,0,0.5)"
           </p>
-          <p class="important">
-            To start using CSS we build a &lt;style&gt;-Tag outside of the
-            &lt;body&gt;-Tag.<br />Kinda like:
-          </p>
-          <img src="../Images/CSS init.png" />
-          <p>
-            So, now that we have a CSS-Sheet in our code, we should go over the
-            basics of CSS.
-          </p>
-          <p>
-            In CSS we can define spefic ways an Element can look with either the
-            tags, Id's of the element or so called Classes.<br />
-            Both class and Id are an attribute any HTML-Tag can have, (&lt;div
-            id="someID" class="TestClass Testclass2"&gt;).<br />
-            As you can see, you can also combine multiple classes in a single
-            Element, so you can be very specific with classes.
-          </p>
-          <p>
-            lets start creating a Class, in your Stylesheet (&lt;style&gt;) you
-            can create a new class by writing:<br />
-            <b>.</b>Classname <br />{<br /><br />}
-          </p>
-          <p>
-            The Dot here specifies that we are talking about a class.<br />
-            To use this class give any HTML-Tag the attribute class="Classname".
-            To use multiple classes just write two classnames in the same
-            attribute with a space between them.
-          </p>
-          <p>
-            To Alter a whole tag, (so everytime for example, when you use
-            &lt;img&gt;, the image looks exactly how you want it to look), you
-            just get rid of the Dot.<br />Kinda like:<br />img
-            <br />{<br /><br />}
-          </p>
-          <p>
-            And to use an ID you just use a #<br />
-            #IDname <br />{<br /><br />}
-          </p>
-          <p>
-            if you want to just target the whole page, you write a * instead of
-            an ID, Class or Tag (nothing else needed)
-          </p>
+          <p style="color: tomato">color: tomato</p>
         </details>
-
         <details>
-          <summary>Options</summary>
+          <summary class="secondary">background-color</summary>
           <p>
-            So lets start altering stuff with CSS now, the syntax of a
-            Stylesheet is simple <br />
-            .SomeClass <br />{<br />SomeKindofAttribute : Value;<br />}<br />
-            the Semicolon (;) after every property is mandatory.
+            You can set the background-color of your element to any color you
+            want, "transparent" is the default value.
           </p>
-          <a
-            class="link"
-            style="padding: 5px"
-            href="https://www.w3schools.com/cssref/index.php"
-            >Here are all properties a Tag can have, but I'll explain the most
-            important ones and give some extra trivia for some.</a
-          >
-
-          <details style="margin-top: 1%">
-            <summary class="secondary">color</summary>
-            <p>
-              Very Simple, you can change the Color of the written Text, you can
-              use predefined colors, rgb codes like "rgb(0, 0, 0)" (which would
-              be black) or hex like "#000000" (also black).<br />
-              rgb also has a sub category called rgba in which you can add an
-              opacity aswell like "rgba(0,0,0.5)"
-            </p>
-            <p style="color: tomato">color: tomato</p>
-          </details>
-          <details>
-            <summary class="secondary">background-color</summary>
-            <p>
-              You can set the background-color of your element to any color you
-              want, "transparent" is the default value.
-            </p>
-            <div
-              style="
+          <div style="
                 background-color: aquamarine;
                 text-align: center;
                 width: 25%;
                 color: black;
-              "
-            >
-              background-color: aquamarine
-            </div>
-          </details>
-          <details>
-            <summary class="secondary">text-align</summary>
-            <p>
-              As the title says, you use this to align text either to the left,
-              right or center etc.
-            </p>
-            <p style="text-align: right; width: 30%">text-align: right</p>
-            <p style="text-align: center; width: 30%">text-align: center</p>
-            <p style="text-align: left; width: 30%">text-align: left</p>
-          </details>
-          <details>
-            <summary class="secondary">background-image</summary>
-            <p>
-              basically the same as the background-color, just that you specify
-              url(link) instead of an color.
-            </p>
-            <div
-              style="
+              ">
+            background-color: aquamarine
+          </div>
+        </details>
+        <details>
+          <summary class="secondary">text-align</summary>
+          <p>
+            As the title says, you use this to align text either to the left,
+            right or center etc.
+          </p>
+          <p style="text-align: right; width: 30%">text-align: right</p>
+          <p style="text-align: center; width: 30%">text-align: center</p>
+          <p style="text-align: left; width: 30%">text-align: left</p>
+        </details>
+        <details>
+          <summary class="secondary">background-image</summary>
+          <p>
+            basically the same as the background-color, just that you specify
+            url(link) instead of an color.
+          </p>
+          <div style="
                 background-image: url(https://static.wixstatic.com/media/0af9cb_f4985eed53a44ccd9a685ed809368d27~mv2.jpg/v1/fill/w_560,h_398,al_c,q_80,usm_0.33_1.00_0.00,enc_auto/0af9cb_f4985eed53a44ccd9a685ed809368d27~mv2.jpg);
                 width: 25%;
-              "
-            >
-              background-image: url(some_image_link)
-            </div>
-          </details>
-          <details>
-            <summary class="secondary">border</summary>
-            <p>
-              As the name says, you can put a border around anything. with
-              border you can set the width, color and style without any other
-              properties, but also WITH other properties.
-              <br />
-              You can also write them in whatever Order you want
-            </p>
-            <p style="border: 2px tomato solid; width: 30%">
-              border: 2px tomato solid
-            </p>
-            <p style="border: 2px tomato dashed; width: 30%">
-              border: 2px tomato dashed
-            </p>
-            <p style="border: 4px tomato double; width: 30%">
-              border: 4px tomato double
-            </p>
-            <p style="border: 4px tomato ridge; width: 30%">
-              border: 4px tomato ridge
-            </p>
-          </details>
-          <details>
-            <summary class="secondary">font</summary>
-            <p>
-              there are multiple properties to manipulate a font. there is font,
-              in which you can manipulate basically anything.
-              <br />
-            </p>
-            <p style="font: 15px Arial, sans-serif">
-              font: 15px Arial, sans-serif;<br />This is a paragraph. The font
-              size is set to 15 pixels, and the font family is Arial.
-            </p>
-            <p style="font: italic small-caps bold 12px/30px Georgia, serif">
-              font: italic small-caps bold 12px/30px Georgia, serif;<br />This
-              is a paragraph. The font is set to italic and bold, with
-              small-caps (all lowercase letters are converted to uppercase). The
-              font size is set to 12 pixels, the line height is set to 30
-              pixels, and the font family is Georgia.
-            </p>
-            <p>
-              Or you can just manipulate single font attributes with font-size,
-              font-weight, font-family and font-style (and more.)
-            </p>
-            <p
-              style="
+              ">
+            background-image: url(some_image_link)
+          </div>
+        </details>
+        <details>
+          <summary class="secondary">border</summary>
+          <p>
+            As the name says, you can put a border around anything. with
+            border you can set the width, color and style without any other
+            properties, but also WITH other properties.
+            <br />
+            You can also write them in whatever Order you want
+          </p>
+          <p style="border: 2px tomato solid; width: 30%">
+            border: 2px tomato solid
+          </p>
+          <p style="border: 2px tomato dashed; width: 30%">
+            border: 2px tomato dashed
+          </p>
+          <p style="border: 4px tomato double; width: 30%">
+            border: 4px tomato double
+          </p>
+          <p style="border: 4px tomato ridge; width: 30%">
+            border: 4px tomato ridge
+          </p>
+        </details>
+        <details>
+          <summary class="secondary">font</summary>
+          <p>
+            there are multiple properties to manipulate a font. there is font,
+            in which you can manipulate basically anything.
+            <br />
+          </p>
+          <p style="font: 15px Arial, sans-serif">
+            font: 15px Arial, sans-serif;<br />This is a paragraph. The font
+            size is set to 15 pixels, and the font family is Arial.
+          </p>
+          <p style="font: italic small-caps bold 12px/30px Georgia, serif">
+            font: italic small-caps bold 12px/30px Georgia, serif;<br />This
+            is a paragraph. The font is set to italic and bold, with
+            small-caps (all lowercase letters are converted to uppercase). The
+            font size is set to 12 pixels, the line height is set to 30
+            pixels, and the font family is Georgia.
+          </p>
+          <p>
+            Or you can just manipulate single font attributes with font-size,
+            font-weight, font-family and font-style (and more.)
+          </p>
+          <p style="
                 font-size: x-large;
                 font-family: 'Times New Roman', Times, serif;
                 font-weight: 700;
                 font-style: italic;
-              "
-            >
-              font-size: x-large;<br />
-              font-family: 'Times New Roman', Times, serif;<br />
-              font-weight: 700;<br />
-              font-style: italic;
-            </p>
-            <a
-              class="link"
-              href="https://www.w3schools.com/cssref/pr_font_font.php"
-              style="padding: 5px"
-              >more about fonts</a
-            >
-          </details>
-          <details>
-            <summary class="secondary">height & width</summary>
-            <p>
-              You can set the height and width of any Element, with these simple
-              properties, you just need to give a measurement, use px (pixel) to
-              hardcode them, % (in relationship to the parent-element aka
-              container above it) or vw/vh for viewwidth/viewheight which is the
-              relationship to the browser fenster, also works like % so 100vh/vw
-              should cover the whole screen
-            </p>
-            <p
-              style="
+              ">
+            font-size: x-large;<br />
+            font-family: 'Times New Roman', Times, serif;<br />
+            font-weight: 700;<br />
+            font-style: italic;
+          </p>
+          <a class="link" href="https://www.w3schools.com/cssref/pr_font_font.php" style="padding: 5px">more about
+            fonts</a>
+        </details>
+        <details>
+          <summary class="secondary">height & width</summary>
+          <p>
+            You can set the height and width of any Element, with these simple
+            properties, you just need to give a measurement, use px (pixel) to
+            hardcode them, % (in relationship to the parent-element aka
+            container above it) or vw/vh for viewwidth/viewheight which is the
+            relationship to the browser fenster, also works like % so 100vh/vw
+            should cover the whole screen
+          </p>
+          <p style="
                 width: 75vw;
                 height: 25vh;
                 background-color: aquamarine;
                 color: black;
-              "
-            >
-              width: 75vw; height: 25vh
-            </p>
-          </details>
-          <details>
-            <summary class="secondary">margin & padding</summary>
-            <p>
-              I decided to put these two together since you will most of the
-              time use one or both of them for easy positioning (we'll talk
-              about absolute positioning later.)<br />
-              Both can also just count for a single direction the syntax would
-              be margin-direction or padding-direction <br />Example:
-              margin-bottom | padding-left
-            </p>
-            <p>
-              Margin is a spacer between two elements, while padding just
-              extends the element a bit more.
-            </p>
-            <img style="margin-left: 5px" src="../Images/padding.PNG" />
-            <p>
-              the green lines are the padding here, it also has a margin-left
-              (away from left) of 5px
-            </p>
-          </details>
-          <details>
-            <summary class="secondary">display</summary>
-            <p>
-              Display configures how the Element behaves inside it's containers,
-              and how it aligns itself next to the other elements in the same
-              container.<br />You can also just let a whole Element dissapear
-              with display: none;<br />
-              <a
-                class="link"
-                style="padding: 0"
-                href="https://developer.mozilla.org/en-US/docs/Web/CSS/display"
-                >More Information about Display</a
-              >
-            </p>
-          </details>
-          <details>
-            <summary class="secondary">Overflow</summary>
-            <p>
-              with overflow you can manipulate how elements look, once they
-              would go over the parent container, for example you can hide
-              anything past the regular screen size with<br />
-              body<br />{<br />overflow: none;<br />}<br />
-              There are also overflow-y and overflow-z variants for only
-              specific axis's.
-            </p>
-          </details>
+              ">
+            width: 75vw; height: 25vh
+          </p>
         </details>
         <details>
-          <summary>Pseudo Classes.</summary>
+          <summary class="secondary">margin & padding</summary>
           <p>
-            You can also manipulate more specific classes in your stylesheet,
-            with multiple methods.<br />If you write a new class like
-            ".class_1.class_2" in your stylesheet, you will manipulate anything
-            that has both class_1 and class_2 at the same time.<br />.class1.class2<br />{<br /><br />}<br />
-          </p>
-          <p class="important">
-            Important to know is, that all containers transfer the classes to
-            their children elements, so if you have a<br />
-            &lt;div class="class1"&gt; &lt;p class="class2"&gt; &lt;/p&gt;
-            &lt;/div&gt;, the P-Element will still take the attributes of
-            Class1.
+            I decided to put these two together since you will most of the
+            time use one or both of them for easy positioning (we'll talk
+            about absolute positioning later.)<br />
+            Both can also just count for a single direction the syntax would
+            be margin-direction or padding-direction <br />Example:
+            margin-bottom | padding-left
           </p>
           <p>
-            To specify a path of classes, (let's use the same example from
-            above), to specify class2 INSIDE of class 1 you would write it with
-            a space between the two classes <br /><br />.class1 .class2<br />{<br /><br />}<br /><br />Important
-            to Note is also that this can be extended, and class1 wouldnt have
-            to be the direct parent of class2 here, it just needs to be above
-            it. (The Last class is always the one which gets changed)
+            Margin is a spacer between two elements, while padding just
+            extends the element a bit more.
           </p>
+          <img style="margin-left: 5px" src="../Images/padding.PNG" />
           <p>
-            If two classes will share the exact same properties you can combine
-            them with a comma like<br />
-            <br />.class1,<br />
-            .class2<br />{<br /><br />}<br /><br />Now both of these classes
-            will have the properties set within.
+            the green lines are the padding here, it also has a margin-left
+            (away from left) of 5px
           </p>
-          <p>
-            While these are still kind of pseudo Class declarations, actual
-            Pseudo Classes are rather about the "state" the class is in.<br />you
-            declare them with a : <br />
-            kind of like:<br /><br />.class1:hover<br />{<br /><br />}<br /><br />Now
-            everything inside here will only apply once you hover any Element
-            with Class1. all other style-properties will be taken from the
-            normal .class1 style. <br />
-            It will use the standard style for the element if no "normal" tag is
-            set, so you can use Pseudo classes without the normal ones existing
-            too!
-          </p>
-          <a
-            class="link"
-            href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes?retiredLocale=de"
-            >Here are all Pseudo-Classes in CSS. (I don't know them all either
-            lmfao)</a
-          >
-          <p>
-            The only ones which you will definetly need are :hover (self
-            explaining), :active (if you press a button for example, the button
-            will be active while pressed.) and :has(.class1)<br /><br /><b
-              >"has"</b
-            >
-            is an interesting one, since you can basically ask if your specific
-            tag has another specific parent tag at some point but not if you
-            have a specific child Element.<br />
-            so You can use :has(childCLASS) to manipulate the parent, if it has
-            that specific class inside of it. <br />
-            &lt;div class="class1"&gt; &lt;div class="class2"&gt; &lt;p
-            class="class3"&gt; &lt;/p&gt; &lt;/div&gt;&lt;/div&gt; <br />
-            So to ask if Class2 inside of Class1 contains a Class3 class you
-            would do something like this. <br /><br />.class1
-            .class2:has(.class3)<br />{<br /><br />}<br /><br />
-          </p>
-          <a
-            class="link"
-            href="https://developer.mozilla.org/en-US/docs/Web/CSS/:has"
-            >More to :has()</a
-          >
-          <p>So as you can see, you can get VERY specific with these Classes</p>
         </details>
-        <details><summary>Debugging</summary></details>
-        <details><summary>Absolute Positioning</summary></details>
-        <details><summary>Text-Fadeout</summary></details>
-      </div>
-      <div>
-        <a href="page5.html">Next Page -></a>
-        <a class="prev" href="page3.html"><--Previous Page </a>
-      </div>
+        <details>
+          <summary class="secondary">display</summary>
+          <p>
+            Display configures how the Element behaves inside it's containers,
+            and how it aligns itself next to the other elements in the same
+            container.<br />You can also just let a whole Element dissapear
+            with display: none;<br />
+            <a class="link" style="padding: 0" href="https://developer.mozilla.org/en-US/docs/Web/CSS/display">More
+              Information about Display</a>
+          </p>
+        </details>
+        <details>
+          <summary class="secondary">Overflow</summary>
+          <p>
+            with overflow you can manipulate how elements look, once they
+            would go over the parent container, for example you can hide
+            anything past the regular screen size with<br />
+            body<br />{<br />overflow: none;<br />}<br />
+            There are also overflow-y and overflow-z variants for only
+            specific axis's.
+          </p>
+        </details>
+      </details>
+      <details>
+        <summary>Pseudo Classes.</summary>
+        <p>
+          You can also manipulate more specific classes in your stylesheet,
+          with multiple methods.<br />If you write a new class like
+          ".class_1.class_2" in your stylesheet, you will manipulate anything
+          that has both class_1 and class_2 at the same time.<br />.class1.class2<br />{<br /><br />}<br />
+        </p>
+        <p class="important">
+          Important to know is, that all containers transfer the classes to
+          their children elements, so if you have a<br />
+          &lt;div class="class1"&gt; &lt;p class="class2"&gt; &lt;/p&gt;
+          &lt;/div&gt;, the P-Element will still take the attributes of
+          Class1.
+        </p>
+        <p>
+          To specify a path of classes, (let's use the same example from
+          above), to specify class2 INSIDE of class 1 you would write it with
+          a space between the two classes <br /><br />.class1 .class2<br />{<br /><br />}<br /><br />Important
+          to Note is also that this can be extended, and class1 wouldnt have
+          to be the direct parent of class2 here, it just needs to be above
+          it. (The Last class is always the one which gets changed)
+        </p>
+        <p>
+          If two classes will share the exact same properties you can combine
+          them with a comma like<br />
+          <br />.class1,<br />
+          .class2<br />{<br /><br />}<br /><br />Now both of these classes
+          will have the properties set within.
+        </p>
+        <p>
+          While these are still kind of pseudo Class declarations, actual
+          Pseudo Classes are rather about the "state" the class is in.<br />you
+          declare them with a : <br />
+          kind of like:<br /><br />.class1:hover<br />{<br /><br />}<br /><br />Now
+          everything inside here will only apply once you hover any Element
+          with Class1. all other style-properties will be taken from the
+          normal .class1 style. <br />
+          It will use the standard style for the element if no "normal" tag is
+          set, so you can use Pseudo classes without the normal ones existing
+          too!
+        </p>
+        <a class="link" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes?retiredLocale=de">Here are
+          all Pseudo-Classes in CSS. (I don't know them all either
+          lmfao)</a>
+        <p>
+          The only ones which you will definetly need are :hover (self
+          explaining), :active (if you press a button for example, the button
+          will be active while pressed.) and :has(.class1)<br /><br /><b>"has"</b>
+          is an interesting one, since you can basically ask if your specific
+          tag has another specific parent tag at some point but not if you
+          have a specific child Element.<br />
+          so You can use :has(childCLASS) to manipulate the parent, if it has
+          that specific class inside of it. <br />
+          &lt;div class="class1"&gt; &lt;div class="class2"&gt; &lt;p
+          class="class3"&gt; &lt;/p&gt; &lt;/div&gt;&lt;/div&gt; <br />
+          So to ask if Class2 inside of Class1 contains a Class3 class you
+          would do something like this. <br /><br />.class1
+          .class2:has(.class3)<br />{<br /><br />}<br /><br />
+        </p>
+        <a class="link" href="https://developer.mozilla.org/en-US/docs/Web/CSS/:has">More to :has()</a>
+        <p>So as you can see, you can get VERY specific with these Classes</p>
+      </details>
+      <details>
+        <summary>Debugging</summary>
+        <p>
+          Debugging will be important when you start working with outside
+          sources like frameworks or even outside stylesheets. With your
+          debugging tools, you can check how the Page is rendered in your
+          browser. (I will assume google chrome as your choice here.)
+        </p>
+        <p class="important">
+          To open the Debugging-Tool on Chrome you either press F12 or you can
+          open it with right click "examine"
+        </p>
+        <p>It will look something like this:</p>
+        <img src="../Images/debugger1.png" style="width: 550px" />
+        <p>
+          To have it not be attached to google, but rather as it's own window,
+          you can press the 3 dots: and press on the first option of Dock side
+        </p>
+        <img src="../Images/debugger2.png" />
+        <p>
+          For this example, i will just use the Site (in the state it is right
+          now.) To show you examples.<br />
+          On the Left you should see the HTML google rendered for you, it may
+          differ from your source code a bit.
+        </p>
+        <img src="../Images/HTML tree.png" />
+        <p>
+          And on the Right you see the visual aspect the website renders (CSS
+          and more.)<br />But as you can see, both have Multiple tabs.
+        </p>
+        <p>
+          You can open any html branch by clicking the arrow next to the tag,
+          on the HTML side, or you click this
+          <img src="../Images/Icons/pick.png" /> Icon (Top Left) and then
+          click on whatever Element you want on the ACTUAL website to
+          automatically open everything up to that path.<br />
+          This icon allows you to basically just open something way faster
+          than manually searching the Code since you can just click the visual
+          Element on the site to open it.
+        </p>
+        <img src="../Images/picking.png" />
+        <p>
+          It would also show you some information about that Element already,
+          you then just left click the element.
+        </p>
+        <img src="../Images/css debug.png" />
+        <p>
+          once you Selected an Element, you can see all the Classes The
+          Element currently has, you can even turn the properties from a
+          single class on and off. remember though, turning a property off on
+          one class doesnt turn it off on all classes.<br /><img src="../Images/overwrite css.png" />
+        <p>
+          Turning the width: in Mainheader off would just activate the width
+          in p for example. <br>If you have two classes on an Element which both change the same property, the one lower
+          on the actual stylesheet will be prioritized.
+        </p>
+        <br />You can even change the properties or add new ones, to see how
+        something would look in Real time instead of Saving, Refreshing and
+        looking over and over.
+        </p>
+        <p class="important">On the Right side you can click on :hov to see a list of pseudo classses and activate them
+          permanently so you can debug easier and not just see the hover effect while actually hovering. basically
+          quality of life! <br><img src="../Images/Pseudo.png" /></p>
+        <p>I will go over the Tabs on the HTML-Tree Side now, since those are more important all in all.</p>
+        <p>Console Basically allows you to see Errors in your code (more important once you get to javascript), and
+          allows you to either input commands or see messages your code gives you out. <br> all in all, its very
+          important once you get to like the logic parts of coding.</p>
+        <img src="../Images/Console.png">
+        <p>Sources is basically the File manager Chrome loads for you, you can find all your single files, images etc
+          there! <br>It can also show you your code, if your Console gives out an error it also gives you a jump into
+          your FIle in sources on the exact line the Error is thrown.</p>
+        <img src="../Images/sources.png">
+        <p class="important">By clicking on the Line number on the code editor in Sources, you can set a breakpoint.
+          Meaning once this part gets loaded, the code stops for until you resume it, this is also important when
+          starting to
+          script, since you can see values your code has loaded at that specific point etc. unrelevant for css though.
+        </p>
+        <p>On Network you can see anything your browser receives. <br> It's good once you send Data into a Server or
+          Receive data (for example when you log in), and you want to know if the Data gets sent correctly. <br> The
+          Rest ist not as important for now.</p>
+      </details>
+      <details>
+        <summary>Absolute Positioning</summary>
+        <p>I lied about all Important Properties being covered before, But the last few will be covered now.<br>There is
+          an position property, and this one can basically decide whether the element interacts with the rest of the
+          site or just decides to position itself however it wants (even outside it's Parent-Elements).</p>
+        <p class="important">You can set the "position" property to:</p>
+        <p><b>- Static </b>(The Element is in the normal position according to the HTML Layout, Left, Right, Top and
+          Bottom
+          properties aswell as z-index do not affect it)<br><b>- relative </b>(The Element is in the normal position
+          according
+          to the HTML Layout, you can move it with the other properties though.)<br><b>- absolute </b>(the position will
+          be
+          overlayering everything, this means you need to control where the image will be yourself, does not respond to
+          the html but only to left, right, top and bottom. to control whether an absolute positioned Element is ontop
+          of another or under another you use z-Index the z-index property with the highest number is the one on
+          top.)<br><b>- sticky</b> (Always on screen, even when you scroll but always at the same screen position too.
+          Good for Headers. You need to Define atleast a top or bottom value to specify at what point it will stick on
+          your screen.)
+        </p>
+        <p>The "Top, Bottom, Left and Right" Properties control the absolute position something has, with relative it
+          controls them inside the parent element but with position absolute they control the position relative to the
+          whole screen. 0 as a value (without measurement) will always be the corner of the standard screen, doesnt
+          adjust with longer pages. </p>
+        <div style="background-color: aquamarine; width: 35%; height: 95px; padding:5px">
+          <div style="background-color: brown; width:25%; position: static; font-size: 15px">position: static;</div>
+          <div style="background-color: blueviolet; position: relative; width:25%; top: 5%; left: 5%; font-size: 15px">
+            position:
+            relative, top:
+            5%; left: 5%;
+          </div>
+          <div style="background-color:blue; width:25%; position: absolute; left:250px; bottom: 0; font-size: 15px">
+            position: absolute; left: 250px; bottom: 0; </div>
+        </div>
+        <details>
+          <summary class="secondary">Lorem Ipsum to see Sticky</summary>
+          <div style=" 
+  position: sticky;
+  top: 0;
+  background-color: yellow;
+  padding: 10px;
+  font-size: 20px;
+  color: black;">I will stick to the screen when you reach my scroll position <br>top: 0; position: sticky;</div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum,
+            nisi lorem
+            egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget,
+            auctor vitae
+            massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in
+            odio.
+            Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed
+            ullamcorper ipsum
+            dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus
+            gravida
+            venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo
+            purus.
+            Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla
+            et dictum
+            interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est,
+            ultrices nec
+            congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed
+            ornare
+            eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis
+            dictum nisi,
+            sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae
+            dui eget
+            tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor
+            porta. Cras ac
+            leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+            imperdiet, nulla
+            et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl
+            est,
+            ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula,
+            facilisis
+            sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc
+            sagittis
+            dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare
+            turpis. Donec
+            vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar
+            nibh tempor
+            porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Phasellus
+            imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor.
+            Maecenas
+            nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris
+            ante ligula,
+            facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus
+            congue. Nunc
+            sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed
+            ornare turpis.
+            Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus
+            pulvinar nibh
+            tempor porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur adipiscing
+            elit.
+            Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula
+            venenatis dolor.
+            Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet.
+            Mauris ante
+            ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit
+            risus congue.
+            Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed
+            ornare
+            turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed
+            dapibus
+            pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet,
+            consectetur
+            adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque
+            enim ligula
+            venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum
+            augue ut
+            aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus
+            interdum ut
+            hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc
+            venenatis
+            imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros
+            non
+            fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum
+            dolor sit
+            amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio,
+            vitae
+            scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa.
+            Fusce luctus
+            vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent
+            convallis urna a
+            lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In
+            at libero
+            sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer
+            fringilla
+            congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam
+            velit. Lorem
+            ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem
+            egestas
+            odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor
+            vitae massa.
+            Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio.
+            Praesent
+            convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum
+            dignissim
+            ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida
+            venenatis.
+            Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus.
+            Mauris quis
+            diam velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum
+            interdum,
+            nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec
+            congue eget,
+            auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu,
+            lobortis in
+            odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed
+            ullamcorper
+            ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus
+            gravida
+            venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo
+            purus.
+            Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla
+            et dictum
+            interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est,
+            ultrices nec
+            congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed
+            ornare
+            eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis
+            dictum nisi,
+            sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae
+            dui eget
+            tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor
+            porta. Cras ac
+            leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+            imperdiet, nulla
+            et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl
+            est,
+            ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula,
+            facilisis
+            sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc
+            sagittis
+            dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare
+            turpis. Donec
+            vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar
+            nibh tempor
+            porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Phasellus
+            imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor.
+            Maecenas
+            nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris
+            ante ligula,
+            facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus
+            congue. Nunc
+            sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed
+            ornare turpis.
+            Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus
+            pulvinar nibh
+            tempor porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur adipiscing
+            elit.
+            Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula
+            venenatis dolor.
+            Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet.
+            Mauris ante
+            ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit
+            risus congue.
+            Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed
+            ornare
+            turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed
+            dapibus
+            pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet,
+            consectetur
+            adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque
+            enim ligula
+            venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum
+            augue ut
+            aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus
+            interdum ut
+            hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc
+            venenatis
+            imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros
+            non
+            fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.Lorem ipsum
+            dolor sit
+            amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio,
+            vitae
+            scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa.
+            Fusce luctus
+            vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent
+            convallis urna a
+            lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In
+            at libero
+            sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer
+            fringilla
+            congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam
+            velit. Lorem
+            ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem
+            egestas
+            odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor
+            vitae massa.
+            Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio.
+            Praesent
+            convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum
+            dignissim
+            ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida
+            venenatis.
+            Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus.
+            Mauris quis
+            diam velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum
+            interdum,
+            nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec
+            congue eget,
+            auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu,
+            lobortis in
+            odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed
+            ullamcorper
+            ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus
+            gravida
+            venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo
+            purus.
+            Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla
+            et dictum
+            interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est,
+            ultrices nec
+            congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed
+            ornare
+            eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis
+            dictum nisi,
+            sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae
+            dui eget
+            tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor
+            porta. Cras ac
+            leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+            imperdiet, nulla
+            et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl
+            est,
+            ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula,
+            facilisis
+            sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc
+            sagittis
+            dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare
+            turpis. Donec
+            vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar
+            nibh tempor
+            porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Phasellus
+            imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor.
+            Maecenas
+            nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris
+            ante ligula,
+            facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus
+            congue. Nunc
+            sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed
+            ornare turpis.
+            Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus
+            pulvinar nibh
+            tempor porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur adipiscing
+            elit.
+            Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula
+            venenatis dolor.
+            Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet.
+            Mauris ante
+            ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit
+            risus congue.
+            Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed
+            ornare
+            turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed
+            dapibus
+            pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet,
+            consectetur
+            adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque
+            enim ligula
+            venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum
+            augue ut
+            aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus
+            interdum ut
+            hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc
+            venenatis
+            imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros
+            non
+            fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.</p>
+        </details>
     </div>
-  </body>
+
+    </details>
+    <details>
+      <summary>Text-Fadeout</summary>
+      <p>
+        This is just one I wish i knew before, honestly i can't tell you why exactly this works how it does, but if
+        you'd like to blend out Text after "x" amount of lines you can use:<br><br>
+        display: -webkit-box;<br>
+
+        -webkit-line-clamp: 4;<br>
+        -webkit-box-orient: vertical;<br>
+        overflow: hidden;<br>
+      </p>
+      <p
+        style="display: -webkit-box; max-width: 200px; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+        This thing should break after just two whole lines of text</p>
+      <p class="important">Full text: "This thing should break after just two whole lines of text", it automatically
+        adds the "...", change "-webkit-line-clamp: x" to specify the amount of lines you can write before it cuts off.
+      </p>
+    </details>
+  </div>
+  <div>
+    <a href="page5.html">Next Page -></a>
+    <a class="prev" href="page3.html"><--Previous Page </a>
+  </div>
+  </div>
+</body>
+
 </html>
 
 <style>
@@ -358,28 +743,35 @@
     position: relative;
     font-size: medium;
   }
+
   body {
     background-image: url("https://wallpapers.com/images/featured/simple-clean-8g9017acqfddycrl.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     color: white;
   }
+
   .showtext {
     background-color: rgba(0, 0, 0, 0.5);
     padding-top: 10px;
     padding-bottom: 10px;
+    overflow: visible;
   }
+
   .secondary {
     font-size: 20px;
     color: chartreuse;
   }
+
   img {
     clear: both;
   }
+
   .important {
     color: tomato;
     font-weight: 700;
   }
+
   .Mainheader {
     font-size: xx-large;
     text-align: center;
@@ -389,16 +781,19 @@
     width: 100%;
     text-decoration: underline;
   }
+
   h3 {
     width: 100%;
     margin-top: 2%;
     margin-left: 5px;
   }
+
   p {
     font-size: large;
     width: 50%;
     margin-left: 5px;
   }
+
   a {
     padding: 15px;
     color: chartreuse;
@@ -407,21 +802,31 @@
     position: absolute;
     right: 0;
   }
+
   .prev {
     left: 0;
     right: auto;
   }
+
   details {
     margin-bottom: 15px;
     font-size: 22px;
   }
+
   table,
   th,
   td {
     border: 1px solid white;
     text-align: center;
   }
+
   summary {
     cursor: pointer;
   }
 </style>
+<script>
+  function random() {
+    console.log("I Logged some stuff! :D");
+    throw 500;
+  }
+</script>
